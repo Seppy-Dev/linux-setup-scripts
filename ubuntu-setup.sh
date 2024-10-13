@@ -10,15 +10,15 @@ sudo apt install unzip -y
 sudo ubuntu-drivers install
 
 #Initialise Flathub
-sudo apt install flatpak
-sudo apt install gnome-software-plugin-flatpak
+sudo apt install flatpak -y
+sudo apt install gnome-software-plugin-flatpak -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 #Install git & git-lfs
 sudo apt install git git-lfs -y
 
 #Install gaming launchers
-sudo apt install steam lutris -y
+sudo apt install steam-installer lutris -y
 flatpak install -y --noninteractive com.heroicgameslauncher.hgl
 
 #Install Unity
@@ -35,12 +35,12 @@ unzip godot.zip
 rm godot.zip
 
 #Install Unreal Engine
-sleep(1)
+sleep 1
 print("Unfortunately automating the install of Unreal Engine is rather a pain, especially if you want different versions")
-sleep(1)
+sleep 1
 print("If you want to download it manually, go here: https://www.unrealengine.com/en-US/linux")
-sleep(1)
-print("Continuing...")
+sleep 1
+print ("Continuing...")
 
 #Download VS Code
 cd ~/Downloads/
@@ -50,14 +50,14 @@ rm vscode.deb
 
 #Download Github Desktop
 wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
-sudo apt update && sudo apt install github-desktop
+sudo apt update && sudo apt install github-desktop -y
 
 #Install Discord & enable Vencord
 flatpak install -y --noninteractive com.discordapp.Discord
 read -p "Do you want to install Vencord? (y/n): " answer
 if [[ "$answer" == "y" || "$answer" == "Y" ]]; then
     echo "Installing Vencord. You will need to manually select the option to install.."
-    sleep(3)
+    sleep 3
     sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
 else
     echo "Skipping Vencord installation..."
@@ -73,7 +73,7 @@ flatpak install -y --noninteractive org.filezillaproject.Filezilla
 sudo apt install wine -y
 
 #Script End
-sleep (2)
+sleep 2
 print("Finished! Rebooting...")
-sleep(3)
+sleep 3
 sudo reboot
