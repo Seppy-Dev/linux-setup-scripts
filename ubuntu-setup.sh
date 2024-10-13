@@ -36,11 +36,11 @@ rm godot.zip
 
 #Install Unreal Engine
 sleep 1
-print("Unfortunately automating the install of Unreal Engine is rather a pain, especially if you want different versions")
+echo "Unfortunately automating the install of Unreal Engine is rather a pain, especially if you want different versions"
 sleep 1
-print("If you want to download it manually, go here: https://www.unrealengine.com/en-US/linux")
+echo "If you want to download it manually, go here: https://www.unrealengine.com/en-US/linux"
 sleep 1
-print ("Continuing...")
+echo "Continuing..."
 
 #Download VS Code
 cd ~/Downloads/
@@ -74,6 +74,6 @@ sudo apt install wine -y
 
 #Script End
 sleep 2
-print("Finished! Rebooting...")
+echo "Finished! Rebooting..."
 sleep 3
 sudo reboot
