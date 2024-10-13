@@ -4,7 +4,7 @@
 sudo apt update -y && sudo apt upgrade -y
 
 #Install packages needed for script
-sudo apt install unzip -y
+sudo apt install unzip curl -y
 
 #Install NVIDIA Drivers
 sudo ubuntu-drivers install
