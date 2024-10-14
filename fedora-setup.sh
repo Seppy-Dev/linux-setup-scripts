@@ -38,12 +38,12 @@ unzip godot.zip
 rm godot.zip
 
 #Install Unreal Engine
-sleep(1)
-print("Unfortunately automating the install of Unreal Engine is rather a pain, especially if you want different versions")
-sleep(1)
-print("If you want to download it manually, go here: https://www.unrealengine.com/en-US/linux")
-sleep(1)
-print("Continuing...")
+sleep 1
+echo "Unfortunately automating the install of Unreal Engine is rather a pain, especially if you want different versions"
+sleep 1
+echo "If you want to download it manually, go here: https://www.unrealengine.com/en-US/linux"
+sleep 1
+echo "Continuing..."
 
 #Download VS Code
 cd ~/Downloads/
@@ -61,7 +61,7 @@ flatpak install -y --noninteractive com.discordapp.Discord
 read -p "Do you want to install Vencord? (y/n): " answer
 if [[ "$answer" == "y" || "$answer" == "Y" ]]; then
     echo "Installing Vencord. You will need to manually select the option to install.."
-    sleep(3)
+    sleep 3
     sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
 else
     echo "Skipping Vencord installation..."
@@ -77,7 +77,7 @@ flatpak install -y --noninteractive org.filezillaproject.Filezilla
 sudo dnf install wine -y
 
 #Script End
-sleep (2)
-print("Finished! Rebooting...")
-sleep(3)
+sleep 2
+echo "Finished! Rebooting..."
+sleep 3
 sudo reboot
