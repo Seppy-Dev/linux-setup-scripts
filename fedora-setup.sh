@@ -30,14 +30,14 @@ sudo sh -c 'echo -e "[unityhub]\nname=Unity Hub\nbaseurl=https://hub.unity3d.com
 sudo dnf update -y
 sudo dnf install unityhub -y
 
-#Install Godot
+#Download Godot
 mkdir ~/apps
 cd ~/apps/
 wget -O godot.zip https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_mono_linux_x86_64.zip
 unzip godot.zip
 rm godot.zip
 
-#Install Unreal Engine
+#Unreal Engine Message
 sleep 2
 echo "Unfortunately automating the install of Unreal Engine is rather a pain, especially if you want different versions"
 sleep 2
