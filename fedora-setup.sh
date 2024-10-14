@@ -38,11 +38,11 @@ unzip godot.zip
 rm godot.zip
 
 #Install Unreal Engine
-sleep 1
+sleep 2
 echo "Unfortunately automating the install of Unreal Engine is rather a pain, especially if you want different versions"
-sleep 1
+sleep 2
 echo "If you want to download it manually, go here: https://www.unrealengine.com/en-US/linux"
-sleep 1
+sleep 2
 echo "Continuing..."
 
 #Download VS Code
